@@ -3,21 +3,58 @@
     <head>
         <meta charset="UTF-8">
         <title>Subjectify</title>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     </head>
-    <body>
-        <p>
-            What phrase to append to search terms?
-        </p>
-        
-        <label><b>Subject</b><input id="append_term"></input></label>
-        <br/>
-        <br/>
-        <br/>
+    <body id="subjectify-body">
+        <header class="mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title">Subjectify</span>
+                </section>
+            </div>
+        </header>
 
-        <label><input id="redirect_enabled" type="checkbox">Redirect Enabled</label>
-        <br/>
-        <br/>
+        <main class="mdc-top-app-bar--fixed-adjust">
+            <h3>
+                What subject phrase to append to search terms?
+            </h3>
 
-        <button id="save">Save</button> <b id="status"></b>
+            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
+                <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                </span>
+                <input class="mdc-text-field__input" id="append_term" type="text" aria-label="Label">
+            </label>
+
+            <br/>
+
+            <div class="mdc-form-field">
+                <div class="mdc-checkbox">
+                    <input type="checkbox"
+                            class="mdc-checkbox__native-control"
+                            id="redirect_enabled"/>
+                    <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark"
+                            viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path"
+                            fill="none"
+                            d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                </div>
+                <label for="redirect_enabled">Redirect Enabled</label>
+            </div>
+
+            <br/>
+            <button class="mdc-button" id="save">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdac-button__label">Save</span>
+            </button>
+
+            <h3 id="status"></h3>
+        </main>
     </body>
 </html>

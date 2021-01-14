@@ -1,3 +1,15 @@
+/* eslint-disable no-unused-vars */
+import {MDCRipple} from "@material/ripple";
+import {MDCTextField} from "@material/textfield";
+import {MDCFormField} from "@material/form-field";
+import {MDCCheckbox} from "@material/checkbox";
+
+const buttonRipple = new MDCRipple(document.querySelector(".mdc-button"));
+const textField = new MDCTextField(document.querySelector(".mdc-text-field"));
+const checkbox = new MDCCheckbox(document.querySelector(".mdc-checkbox"));
+const formField = new MDCFormField(document.querySelector(".mdc-form-field"));
+formField.input = checkbox;
+
 import "../css/options.css";
 
 document.getElementById("save").addEventListener("click", save);
@@ -32,3 +44,4 @@ function load() {
         document.getElementById("redirect_enabled").checked = storage.redirectEnabled;
     });
 }
+
