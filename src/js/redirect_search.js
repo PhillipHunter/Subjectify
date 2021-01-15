@@ -12,20 +12,18 @@ function runAppend(storage) {
     var currURL = new URL(window.location.href);
     var currQuery = currURL.searchParams.get("q");
 
-    if((!currQuery.includes(appendTerm)) && (appendTerm.trim() != "") && redirectEnabled) {
+    if(!redirectEnabled) {
+        console.log("Subjectify - Redirect disabled. Not redirecting.");
+    } else if(appendTerm.trim() == "") {
+        console.log("Subjectify - Append term is empty. Not redirecting.");
+    } else if(currQuery.toLowerCase().includes(appendTerm.toLowerCase())) {
+        console.log(`Subjectify - Append term ${appendTerm} already appended. Not redirecting.`);
+    } else {
         console.log(`Subjectify - Appending term ${appendTerm} to search and redirecting.`);
-        currURL.searchParams.set("q", currQuery + " " + appendTerm);
+        currURL.searchParams.set("q", `${currQuery} ${appendTerm}`);
 
         console.log(currURL.href);
 
         window.location.replace(currURL.href);
-    } else {
-        if((appendTerm.trim() == "")) {
-            console.log("Subjectify - Append term is empty. Not redirecting.");
-        } else if(!redirectEnabled) {
-            console.log("Subjectify - Redirect disabled. Not redirecting.");
-        } else {
-            console.log(`Subjectify - Append term ${appendTerm} already appended. Not redirecting.`);
-        }
     }
 }
