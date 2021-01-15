@@ -8,3 +8,8 @@
     --mdc-theme-on-secondary: #FFFF00;
     --mdc-theme-on-surface: #FF8000;
 }
+
+#subjectify-footer {
+    font-size: 90%;
+    float: right;
+}
