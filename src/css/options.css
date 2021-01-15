@@ -3,13 +3,15 @@
     --mdc-theme-primary: #FFF59D;
     --mdc-theme-secondary: #81C784;
     --mdc-theme-background: #F9F9F9;
-    --mdc-theme-surface: #00FFFF;
+    --mdc-theme-surface: #FFFFCF;
     --mdc-theme-on-primary: #000000;
     --mdc-theme-on-secondary: #FFFF00;
-    --mdc-theme-on-surface: #FF8000;
+    --mdc-theme-on-surface: #CBC26D;
 }
 
 #subjectify-footer {
-    font-size: 90%;
+    font-size: 80%;
     float: right;
+    padding-left: 5px;
+    padding-right: 5px;
 }
