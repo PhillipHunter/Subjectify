@@ -52,8 +52,22 @@
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__label">Save</span>
             </button>
+            
+            <br/>
+            <br/>
 
-            <h3 id="status"></h3>
+            <div role="progressbar" id="save_progress_bar" class="mdc-linear-progress" aria-label="Example Progress Bar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0">
+                <div class="mdc-linear-progress__buffer">
+                  <div class="mdc-linear-progress__buffer-bar"></div>
+                  <div class="mdc-linear-progress__buffer-dots"></div>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+                <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                  <span class="mdc-linear-progress__bar-inner"></span>
+                </div>
+              </div>
         </main>
 
         <div class="mdc-theme--surface mdc-typography--caption mdc-theme--on-surface" id="subjectify-footer">
