@@ -14,33 +14,7 @@ const linearProgress = new MDCLinearProgress(document.querySelector(".mdc-linear
 
 import "../css/options.css";
 
-document.getElementById("save").addEventListener("click", save);
-
-function save() {
-    var term = document.getElementById("append_term").value;
-    var enabled = document.getElementById("redirect_enabled").checked;
-
-    document.getElementById("save").outline = "none";
-
-    chrome.storage.sync.set({
-        appendTerm: term,
-        redirectEnabled: enabled
-    }, displaySavedMessage);
-}
-
-function displaySavedMessage() {
-    linearProgress.determinate = false;
-    linearProgress.open();
-
-    setTimeout(function () {
-        linearProgress.close();
-        buttonRipple.handleFocus();
-
-    }, 500);
-}
-
 document.addEventListener("DOMContentLoaded", load);
-
 function load() {
     linearProgress.close();
     chrome.storage.sync.get({
@@ -52,3 +26,24 @@ function load() {
     });
 }
 
+document.getElementById("save").addEventListener("click", save);
+function save() {
+    var term = document.getElementById("append_term").value;
+    var enabled = document.getElementById("redirect_enabled").checked;
+
+    document.getElementById("save").outline = "none";
+
+    chrome.storage.sync.set({
+        appendTerm: term,
+        redirectEnabled: enabled
+    }, postSave);
+}
+
+function postSave() {
+    linearProgress.determinate = false;
+    linearProgress.open();
+
+    setTimeout(function () {
+        linearProgress.close();
+    }, 400);
+}

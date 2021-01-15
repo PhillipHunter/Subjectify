@@ -1,4 +1,4 @@
-#subjectify-body {
+.subjectify-body {
     width: 400px;
     --mdc-theme-primary: #FFF59D;
     --mdc-theme-secondary: #81C784;
@@ -9,7 +9,11 @@
     --mdc-theme-on-surface: #CBC26D;
 }
 
-#subjectify-footer {
+.subjectify-input {
+    --mdc-theme-primary: #000000;
+}
+
+.subjectify-footer {
     font-size: 80%;
     float: right;
     padding-left: 5px;
