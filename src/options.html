@@ -4,12 +4,13 @@
         <meta charset="UTF-8">
         <title>Subjectify</title>
         <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     </head>
-    <body id="subjectify-body">
+    <body class="mdc-theme--background mdc-typography" id="subjectify-body">
         <header class="mdc-top-app-bar">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                    <span class="mdc-top-app-bar__title">Subjectify</span>
+                    <span class="mdc-top-app-bar__title mdc-theme--on-primary">Subjectify</span>
                 </section>
             </div>
         </header>
@@ -19,12 +20,10 @@
                 What subject phrase to append to search terms?
             </h3>
 
-            <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--no-label">
-                <span class="mdc-notched-outline">
-                    <span class="mdc-notched-outline__leading"></span>
-                    <span class="mdc-notched-outline__trailing"></span>
-                </span>
-                <input class="mdc-text-field__input" id="append_term" type="text" aria-label="Label">
+            <label class="mdc-text-field mdc-text-field--filled--no-label">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" id="append_term" type="text" aria-labelledby="append_term">
+                <span class="mdc-line-ripple"></span>
             </label>
 
             <br/>
@@ -43,15 +42,15 @@
                     </svg>
                     <div class="mdc-checkbox__mixedmark"></div>
                     </div>
-                    <div class="mdc-checkbox__ripple"></div>
                 </div>
                 <label for="redirect_enabled">Redirect Enabled</label>
             </div>
 
             <br/>
-            <button class="mdc-button" id="save">
+
+            <button class="mdc-button mdc-button--raised" id="save">
                 <span class="mdc-button__ripple"></span>
-                <span class="mdac-button__label">Save</span>
+                <span class="mdc-button__label">Save</span>
             </button>
 
             <h3 id="status"></h3>

@@ -18,6 +18,8 @@ function save() {
     var term = document.getElementById("append_term").value;
     var enabled = document.getElementById("redirect_enabled").checked;
 
+    document.getElementById("save").outline = "none";
+
     chrome.storage.sync.set({
         appendTerm: term,
         redirectEnabled: enabled

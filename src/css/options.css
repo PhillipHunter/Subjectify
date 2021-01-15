@@ -1,3 +1,10 @@
 #subjectify-body {
-    width:400px;
+    width: 400px;
+    --mdc-theme-primary: #FFF59D;
+    --mdc-theme-secondary: #81C784;
+    --mdc-theme-background: #F9F9F9;
+    --mdc-theme-surface: #00FFFF;
+    --mdc-theme-on-primary: #000000;
+    --mdc-theme-on-secondary: #FFFF00;
+    --mdc-theme-on-surface: #FF8000;
 }
