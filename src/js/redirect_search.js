@@ -1,7 +1,7 @@
 console.log("Subjectify - New Google search page loaded.");
 
 chrome.storage.sync.get({
-    appendTerm: "",
+    appendTerm: "subject",
     redirectEnabled: false
 }, runAppend);
 

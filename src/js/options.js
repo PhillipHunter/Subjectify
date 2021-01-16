@@ -18,7 +18,7 @@ function load() {
     linearProgress.close();
     hideSave();
     chrome.storage.sync.get({
-        appendTerm: "",
+        appendTerm: "subject",
         redirectEnabled: false
     }, function(storage) {
         document.getElementById("subject-input").value = storage.appendTerm;
