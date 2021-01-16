@@ -17,6 +17,7 @@ import "../css/options.css";
 document.addEventListener("DOMContentLoaded", load);
 function load() {
     linearProgress.close();
+    hideSave();
     chrome.storage.sync.get({
         appendTerm: "",
         redirectEnabled: false
@@ -31,8 +32,6 @@ function save() {
     var term = document.getElementById("append_term").value;
     var enabled = document.getElementById("redirect_enabled").checked;
 
-    document.getElementById("save").outline = "none";
-
     chrome.storage.sync.set({
         appendTerm: term,
         redirectEnabled: enabled
@@ -45,5 +44,19 @@ function postSave() {
 
     setTimeout(function () {
         linearProgress.close();
+        hideSave();
     }, 400);
+}
+
+document.getElementById("append_term").addEventListener("input", showSave);
+document.getElementById("redirect_enabled").addEventListener("change", showSave);
+
+function showSave() {
+    document.getElementById("save").style.visibility = "visible";
+    console.log("Show");
+}
+
+function hideSave() {
+    document.getElementById("save").style.visibility = "hidden";
+    console.log("Hide");
 }
