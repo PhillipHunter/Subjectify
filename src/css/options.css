@@ -1,12 +1,12 @@
 .subjectify-body {
     width: 400px;
-    --mdc-theme-primary: #FFF59D;
-    --mdc-theme-secondary: #81C784;
+    --mdc-theme-primary: #3d5aff;
+    --mdc-theme-secondary: #3d5aff;
     --mdc-theme-background: #F9F9F9;
-    --mdc-theme-surface: #FFFFCF;
-    --mdc-theme-on-primary: #000000;
-    --mdc-theme-on-secondary: #FFFF00;
-    --mdc-theme-on-surface: #CBC26D;
+    --mdc-theme-surface: #536dfe;
+    --mdc-theme-on-primary: #ffffff;
+    --mdc-theme-on-secondary: #ffffff;
+    --mdc-theme-on-surface: #ffffff;
 }
 
 .subjectify-input {
