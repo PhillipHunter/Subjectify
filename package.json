@@ -1,6 +1,6 @@
 {
     "name": "subjectify",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Subjectify allows you to automatically append a term/phrase to the end of search engine queries.",
     "author": "Phillip Hunter",
     "scripts": {
