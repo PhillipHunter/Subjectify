@@ -1,7 +1,7 @@
 {
     "name": "subjectify",
     "version": "0.0.1",
-    "description": "Add selected subject text to the end of search engine queries",
+    "description": "Subjectify allows you to automatically append a term/phrase to the end of search engine queries.",
     "author": "Phillip Hunter",
     "scripts": {
         "build": "node utils/build.js",

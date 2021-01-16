@@ -1,9 +1,7 @@
 # Subjectify #
 ----------
 
-
-
-This extension adds the selected subject text to the end of search engine queries.
+Subjectify allows you to automatically append a term/phrase to the end of search engine queries.
 
 ## Supported Search Engines ##
 - Google
